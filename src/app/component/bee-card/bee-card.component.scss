@@ -1,0 +1,57 @@
+.bee-card {
+    width: 100%;
+    padding-top: calc(100% * 0.618);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    &-body {
+        position: absolute;
+        left: calc(var(--bee-padding, 16px) / 2);
+        right: calc(var(--bee-padding, 16px) / 2);
+        top: calc(var(--bee-padding, 16px) / 2);
+        bottom: calc(var(--bee-padding, 16px) / 2);
+        border-radius: var(--bee-border-radius);
+        border: 1px solid var(--bee-border-color);
+        overflow: hidden;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover {
+            transition: all .5s;
+            box-shadow: var(--bee-border-color) 0px 0px 8px;
+        }
+    }
+
+    &-content {
+        width: 60%;
+        height: 100%;
+        padding: var(--bee-padding, 16px);
+        writing-mode: vertical-lr;
+        font-family: var(--bee-font-family);
+        font-size: 16px;
+        overflow: hidden;
+        display: flex;
+
+        .content {
+            max-width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+    }
+
+    &-cover {
+        width: 40%;
+        height: 100%;
+        padding: var(--bee-padding, 16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

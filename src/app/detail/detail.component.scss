@@ -1,0 +1,39 @@
+.bee-detail {
+    width: 100%;
+    height: calc(100vh - 45px - var(--bee-header-height));
+    margin-top: var(--bee-header-height);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &-logo {
+        width: 100%;
+        height: max-content;
+        overflow: hidden;
+
+        img {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &-body {
+        flex: 1;
+        width: var(--bee-body-width);
+        margin: var(--bee-margin) auto;
+        padding: var(--bee-padding);
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    &-content {
+        width: 100%;
+        height: 100%;
+        writing-mode: vertical-lr;
+        font-family: var(--bee-font-family);
+        font-size: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}

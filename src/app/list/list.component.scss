@@ -1,0 +1,42 @@
+$padding: calc(var(--bee-padding) / 2);
+
+.bee-list {
+    width: 100%;
+    margin-top: var(--bee-header-height);
+    overflow: hidden;
+
+    &-logo {
+        width: 100%;
+        height: max-content;
+        overflow: hidden;
+
+        img {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &-content {
+        width: var(--bee-body-width);
+        margin: var(--bee-margin) auto;
+        padding: $padding;
+        overflow: hidden;
+        background-color: white;
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+
+            .list-item {
+                flex-basis: 25%;
+            }
+        }
+
+        .list-page {
+            display: flex;
+            justify-content: center;
+            padding: calc(var(--bee-padding) / 2);
+        }
+    }
+}

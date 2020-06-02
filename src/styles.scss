@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --bee-body-width: 80%;
+    --bee-border-radius: 5px;
+    --bee-padding: 16px;
+    --bee-margin: 16px;
+    --bee-font-family: 'NotoSansNormal';
+    --bee-border-color: #dadada;
+    --bee-header-height: 150px;
+}
+
+body {
+    width: 100%;
+    height: auto!important;
+    background: url('./assets/image/bodybg.jpg') 0px 0px repeat scroll;
+}
+
+@font-face {
+    font-family: 'NotoSansNormal';
+    src: url('./assets/fonts/OrhonMglTig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-text-orientation: sideways-right;
+}

@@ -1,0 +1,32 @@
+<bee-nav></bee-nav>
+
+<div class="bee-list">
+
+    <div class="bee-list-logo" *ngIf="parentLoading">
+        <img [src]="host + parentData.pic">
+    </div>
+
+    <div class="bee-list-content">
+        <div *ngIf="type === 'exhibition'">
+            <bee-card *ngFor="let item of data; let i = index;" (click)="itemClikc(item)" [cover]="item.ico" [title]="item.title"
+                      [position]="i % 2 === 0 ? 'left' : 'right'" height="240px"></bee-card>
+        </div>
+
+        <div class="content" *ngIf="!type">
+            <div class="list-item" *ngFor="let item of data;" (click)="itemClikc(item)">
+                <bee-card [cover]="item.ico" [title]="item.title"></bee-card>
+            </div>
+        </div>
+
+        <div class="" *ngIf="loading">
+            <nz-skeleton [nzActive]="true"></nz-skeleton>
+        </div>
+
+        <div class="list-page" *ngIf="total !== 0">
+            <nz-pagination [nzPageIndex]="page" [nzTotal]="total" (nzPageIndexChange)="pageChange($event)"
+                           (nzPageSizeChange)="limitChange($event)" nzShowSizeChanger
+                           [nzPageSize]="limit"></nz-pagination>
+        </div>
+    </div>
+</div>
+

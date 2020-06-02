@@ -1,0 +1,50 @@
+<div class="bee-nav">
+    <div class="bee-nav-content">
+        <div class="logo">
+            <img src="../../../assets/image/logo.png" (click)="logoClikc()">
+        </div>
+        <div class="nav">
+            <div class="nav-item" (click)="navChange2()">
+                ᠨᠢᠭᠤᠷ ᠬᠠᠭᠤᠳᠠᠰᠤ
+            </div>
+
+            <div class="nav-item" *ngFor="let item of data; let i = index;">
+
+                {{ item.name }}
+
+                <div class="nav-item-child" *ngIf="item.son.length">
+
+                    <div class="nav-item-child-item" *ngFor="let el of item.son;" (click)="navChange(item, el)">
+
+                        {{ el.name }}
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="nav-item">
+
+                ᠠᠵᠢᠯ ᠲᠥᠷᠥᠯ ᠤᠨ ᠪᠦᠯᠦᠭ
+
+                <div class="nav-item-child">
+
+                    <img class="erweima" src="../../../assets/image/qun.jpg">
+
+                </div>
+            </div>
+
+            <div class="nav-item">
+
+                ᠰᠣᠶᠣᠯ ᠤᠨ ᠡᠭᠦᠳᠦᠯᠲᠡ ᠶᠢᠨ ᠪᠢᠴᠢᠯ ᠳᠡᠯᠭᠡᠭᠦᠷ
+
+                <div class="nav-item-child">
+
+                    <img class="erweima" src="../../../assets/image/weidian.png">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

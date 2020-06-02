@@ -1,0 +1,40 @@
+.bee-banner {
+    height: auto;
+}
+
+:host ::ng-deep .ant-carousel .slick-slide img {
+    width: 100% !important;
+}
+
+:host ::ng-deep .slick-list {
+    height: auto !important;
+}
+
+:host ::ng-deep .slick-track {
+    height: auto !important;
+}
+
+:host ::ng-deep .ant-carousel .slick-initialized .slick-slide {
+    height: auto !important;
+}
+
+:host ::ng-deep .slick-dots li {
+    height: 34px;
+    width: 34px;
+    background-image: url("../assets/image/banner.png");
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+    background-position: 50%;
+}
+
+:host ::ng-deep .slick-dots li button {
+    display: none;
+}
+
+:host ::ng-deep .slick-dots .slick-active {
+    background-image: url("../assets/image/banner-active.png");
+}
+
+:host ::ng-deep .ant-carousel .slick-dots {
+    height: 34px;
+}

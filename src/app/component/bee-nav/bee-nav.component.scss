@@ -1,0 +1,93 @@
+$primary-color: #C28D3D;
+
+.bee-nav {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: var(--bee-header-height);
+    background-image: url('../../../assets/image/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 160px;
+    z-index: 99;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        width: var(--bee-body-width);
+        height: 100%;
+        margin: 0 auto;
+
+        .logo {
+            height: 100%;
+            padding: var(--bee-padding) 0;
+            overflow: hidden;
+
+            img {
+                display: flex;
+            }
+        }
+
+        .nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            height: 100%;
+            margin-left: var(--bee-margin);
+
+            &-item {
+                height: 100%;
+                padding: var(--bee-padding) calc(var(--bee-padding) / 2);
+                font-family: var(--bee-font-family);
+                writing-mode: vertical-lr;
+                font-size: 20px;
+                position: relative;
+                cursor: pointer;
+                color: #17233d;
+
+                &:hover {
+                    color: $primary-color;
+                    .nav-item-child {
+                        height: var(--bee-header-height);
+                        transition: height .3s;
+                    }
+                }
+
+                &-child {
+                    display: flex;
+                    flex-direction: column;
+                    width: max-content;
+                    height: 0;
+                    position: absolute;
+                    top: 100%; right: 0;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    overflow: hidden;
+                    transition: height .3s;
+                    padding: 0 calc(var(--bee-padding) / 2);
+                    border-radius: 0 0 var(--bee-border-radius) var(--bee-border-radius);
+
+                    &-item {
+                        height: var(--bee-header-height);
+                        padding: var(--bee-padding) calc(var(--bee-padding) / 2);
+                        font-family: var(--bee-font-family);
+                        writing-mode: vertical-lr;
+                        font-size: 20px;
+                        position: relative;
+                        cursor: pointer;
+                        color: #fff;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+
+                    .erweima {
+                        display: flex;
+                        height: 118px;
+                        margin: var(--bee-padding) calc(var(--bee-padding) / 2);
+                    }
+                }
+            }
+        }
+    }
+}

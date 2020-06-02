@@ -1,0 +1,13 @@
+<bee-nav></bee-nav>
+
+<div class="bee-detail">
+    <div class="bee-detail-logo" *ngIf="parentLoading && parentData.pic">
+        <img [src]="host + parentData.pic">
+    </div>
+
+    <div class="bee-detail-body" *ngIf="loading">
+        <div class="bee-detail-content" [innerHTML]="data.content"></div>
+    </div>
+</div>
+
+<bee-footer></bee-footer>

@@ -1,0 +1,94 @@
+<bee-nav></bee-nav>
+
+<div id="fullpage">
+
+    <div class="section" id="section0">
+        <div class="bee-banner">
+            <nz-carousel nzAutoPlay>
+                <div nz-carousel-content *ngFor="let item of data">
+                    <img [src]="host + item.pic">
+                </div>
+            </nz-carousel>
+        </div>
+    </div>
+
+    <div class="section" id="section1">
+        <div class="company-logo">
+            <img src="../../assets/image/compoy.png">
+        </div>
+        <div class="company-about" *ngIf="loading" [innerHTML]="about.content" [ngStyle]="{transform: aboutScale}">
+        </div>
+    </div>
+
+    <div class="section" id="section2">
+        <div class="news">
+            <div class="news-header">
+                <span> ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠬᠤ ᠠᠭᠤᠯᠭ᠎ᠠ </span>
+            </div>
+
+            <div class="news-content" [ngStyle]="{left: newLeft}">
+                <div class="new-item" *ngFor="let item of list; let i = index;" [hidden]="i > 3" (click)="itemClikc(item)">
+                    <div class="title"> {{ item.description }} </div>
+                    <img [src]="host + item.ico">
+                </div>
+
+                <div class="new-more" (click)="newsClikc()">
+                    <span> ᠨᠡᠩ ᠤᠯᠠᠨ </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section3">
+        <div class="collection" [ngStyle]="{transform: collectionTransform}">
+            <img [src]="host + collection[collectionIndex]">
+
+            <div class="prev" *ngIf="collectionIndex !== 0" (click)="collectionIndex = collectionIndex - 1"></div>
+            <div class="next" *ngIf="collectionIndex !== collection.length - 1" (click)="collectionIndex = collectionIndex + 1"></div>
+        </div>
+    </div>
+
+    <div class="section" id="section4">
+        <div class="exhibition" [ngStyle]="{transform: exhibitionTransform}">
+            <div class="exhibition-header">
+                <span> ᠽᠦᠢ ᠰᠢᠨ ᠦᠵᠡᠰᠬᠦᠯᠡᠩ </span>
+            </div>
+
+            <div class="exhibition-content">
+                <div class="new-item" *ngFor="let item of exhibition; let i = index;" [hidden]="i > 4" (click)="itemClikc(item)">
+                    <div class="title"> {{ item.description }} </div>
+                    <img [src]="host + item.ico">
+                </div>
+
+                <div class="new-more" (click)="exhibitionClikc()">
+                    <span> ᠨᠡᠩ ᠤᠯᠠᠨ </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section5">
+        <div class="notice" [ngStyle]="{right: noticeRight}">
+            <div class="notice-item">
+                <div class="title">
+                    <span> ᠳᠡᠯᠭᠡᠭᠦᠷ ᠨᠡᠭᠡᠭᠡᠬᠦ ᠴᠠᠭ </span>
+                </div>
+                <div class="content" *ngIf="timeLoading" [innerHTML]="timeData.content"></div>
+            </div>
+            <div class="notice-item">
+                <div class="title">
+                    <span> ᠵᠠᠮ ᠬᠠᠷᠢᠯᠴᠠᠭᠠᠨ ᠤ ᠱᠤᠭᠤᠮ</span>
+                </div>
+                <div class="content" *ngIf="trafficLoading" [innerHTML]="trafficData.content"></div>
+            </div>
+            <div class="notice-item">
+                <div class="title">
+                    <span> ᠵᠤᠭᠠᠴᠠᠭᠰᠠᠳ ᠤᠨ ᠮᠡᠳᠡᠬᠦ ᠶᠣᠰᠣᠲᠠᠶ ᠵᠦᠶᠯ </span>
+                </div>
+                <div class="content" *ngIf="noticeLoading" [innerHTML]="noticeData.content"></div>
+            </div>
+        </div>
+
+        <bee-footer></bee-footer>
+    </div>
+</div>
