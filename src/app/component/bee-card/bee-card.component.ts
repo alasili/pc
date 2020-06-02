@@ -15,6 +15,9 @@ export class BeeCardComponent implements OnInit {
     title = '';
 
     @Input()
+    full = false;
+
+    @Input()
     position = 'left';
 
     @Input()

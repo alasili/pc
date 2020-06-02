@@ -1,21 +1,38 @@
 .bee-banner {
-    height: auto;
+    height: 100%;
+}
+
+:host ::ng-deep .slick-initialized {
+    height: 100% !important;
 }
 
 :host ::ng-deep .ant-carousel .slick-slide img {
     width: 100% !important;
 }
 
+:host ::ng-deep .slick-slide {
+    height: 100% !important;
+}
+
 :host ::ng-deep .slick-list {
-    height: auto !important;
+    height: 100% !important;
 }
 
 :host ::ng-deep .slick-track {
-    height: auto !important;
+    height: 100% !important;
 }
 
 :host ::ng-deep .ant-carousel .slick-initialized .slick-slide {
-    height: auto !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+:host ::ng-deep .ant-carousel .slick-initialized .slick-slide img {
+    height: 100% !important;
+    display: flex;
 }
 
 :host ::ng-deep .slick-dots li {

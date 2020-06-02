@@ -40,10 +40,11 @@ $primary-color: #C28D3D;
                 padding: var(--bee-padding) calc(var(--bee-padding) / 2);
                 font-family: var(--bee-font-family);
                 writing-mode: vertical-lr;
-                font-size: 20px;
+                font-size: 25px;
                 position: relative;
                 cursor: pointer;
                 color: #17233d;
+                font-weight: bold;
 
                 &:hover {
                     color: $primary-color;

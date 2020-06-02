@@ -72,46 +72,46 @@ export class HomeComponent implements OnInit, OnDestroy {
 
                 afterLoad: (anchorLink, index) => {
 
-                    if (index === 2) {
-                        that.aboutScale = 'scale(1)';
-                    }
+                    // if (index === 2) {
+                    //     that.aboutScale = 'scale(1)';
+                    // }
 
-                    if (index === 3) {
+                    if (index === 2) {
                         that.newLeft = '0';
                     }
 
-                    if (index === 4) {
+                    if (index === 3) {
                         that.collectionTransform = 'rotate(360deg) scale(1)';
                     }
 
-                    if (index === 5) {
+                    if (index === 4) {
                         that.exhibitionTransform = 'scale(1)';
                     }
 
-                    if (index === 6) {
+                    if (index === 5) {
                         that.noticeRight = '0';
                     }
                 },
 
                 onLeave: (index, direction) => {
 
-                    if (index === 2) {
-                        that.aboutScale = 'scale(0)';
-                    }
+                    // if (index === 2) {
+                    //     that.aboutScale = 'scale(0)';
+                    // }
 
-                    if (index === 3) {
+                    if (index === 2) {
                         that.newLeft = '-120%';
                     }
 
-                    if (index === 4) {
+                    if (index === 3) {
                         that.collectionTransform = 'rotate(0deg) scale(0)';
                     }
 
-                    if (index === 5) {
+                    if (index === 4) {
                         that.exhibitionTransform = 'scale(0)';
                     }
 
-                    if (index === 6) {
+                    if (index === 5) {
                         that.noticeRight = '-120%';
                     }
                 }

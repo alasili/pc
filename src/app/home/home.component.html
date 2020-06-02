@@ -12,26 +12,24 @@
         </div>
     </div>
 
-    <div class="section" id="section1">
+    <!-- <div class="section" id="section1">
         <div class="company-logo">
             <img src="../../assets/image/compoy.png">
         </div>
         <div class="company-about" *ngIf="loading" [innerHTML]="about.content" [ngStyle]="{transform: aboutScale}">
         </div>
-    </div>
+    </div> -->
 
     <div class="section" id="section2">
         <div class="news">
             <div class="news-header">
                 <span> ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠬᠤ ᠠᠭᠤᠯᠭ᠎ᠠ </span>
             </div>
-
             <div class="news-content" [ngStyle]="{left: newLeft}">
                 <div class="new-item" *ngFor="let item of list; let i = index;" [hidden]="i > 3" (click)="itemClikc(item)">
                     <div class="title"> {{ item.description }} </div>
                     <img [src]="host + item.ico">
                 </div>
-
                 <div class="new-more" (click)="newsClikc()">
                     <span> ᠨᠡᠩ ᠤᠯᠠᠨ </span>
                 </div>
@@ -40,7 +38,7 @@
     </div>
 
     <div class="section" id="section3">
-        <div class="collection" [ngStyle]="{transform: collectionTransform}">
+        <div class="collection" [ngStyle]="{transform: collectionTransform,backgroundImage:'url('+host + collection[collectionIndex]+')'}" >
             <img [src]="host + collection[collectionIndex]">
 
             <div class="prev" *ngIf="collectionIndex !== 0" (click)="collectionIndex = collectionIndex - 1"></div>

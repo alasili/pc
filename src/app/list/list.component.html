@@ -14,7 +14,7 @@
 
         <div class="content" *ngIf="!type">
             <div class="list-item" *ngFor="let item of data;" (click)="itemClikc(item)">
-                <bee-card [cover]="item.ico" [title]="item.title"></bee-card>
+                <bee-card [full]="true" [cover]="item.ico" [title]="item.title"></bee-card>
             </div>
         </div>
 
