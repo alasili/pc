@@ -40,7 +40,16 @@ export class BeeNavComponent implements OnInit {
     }
 
     navChange(parent: any, event: any): void {
-        this.router.navigate(['/list'], {queryParams: {pid: parent.scode, id: event.scode, type: parent.filename}});
+        const bool = event.filename.includes('exhibition');
+        const detail = event.filename.includes('nodetail');
+        this.router.navigate(['/list'], {
+            queryParams: {
+                pid: parent.scode,
+                id: event.scode,
+                type: bool ? 'exhibition' : '',
+                detail: detail ? 'nodetail' : ''
+            }
+        });
     }
 
     logoClikc(): void {

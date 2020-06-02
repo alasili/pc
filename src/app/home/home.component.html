@@ -37,8 +37,8 @@
         </div>
     </div>
 
-    <div class="section" id="section3">
-        <div class="collection" [ngStyle]="{transform: collectionTransform,backgroundImage:'url('+host + collection[collectionIndex]+')'}" >
+    <div class="section" id="section3" [ngStyle]="{backgroundImage:'url('+host + collection[collectionIndex]+')'}">
+        <div class="collection" [ngStyle]="{transform: collectionTransform}" >
             <img [src]="host + collection[collectionIndex]">
 
             <div class="prev" *ngIf="collectionIndex !== 0" (click)="collectionIndex = collectionIndex - 1"></div>

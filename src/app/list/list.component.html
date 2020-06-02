@@ -7,8 +7,8 @@
     </div>
 
     <div class="bee-list-content">
-        <div *ngIf="type === 'exhibition'">
-            <bee-card *ngFor="let item of data; let i = index;" (click)="itemClikc(item)" [cover]="item.ico" [title]="item.title"
+        <div class="content2" *ngIf="type === 'exhibition'">
+            <bee-card *ngFor="let item of data; let i = index;" (click)="itemClikc(item)" [cover]="item.ico" [title]="item.title" [description]="item.description"
                       [position]="i % 2 === 0 ? 'left' : 'right'" height="240px"></bee-card>
         </div>
 

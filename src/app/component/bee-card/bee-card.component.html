@@ -1,7 +1,10 @@
 <div class="bee-card" [ngStyle]="{paddingTop: height ? height : ''}">
     <div class="bee-card-body" *ngIf="!full">
         <div class="bee-card-content" [ngStyle]="{float: position === 'left' ? 'left' : 'right', alignItems: position === 'left' ? 'flex-start' : 'flex-end'}">
-            <div class="content" [innerHTML]="title"></div>
+            <div class="content">
+                <div class="title" [innerHTML]="title"></div>
+                <div [innerHTML]="description"></div>
+            </div>
         </div>
         <div class="bee-card-cover" [ngStyle]="{float: position === 'left' ? 'right' : 'left'}">
             <img [src]="cover ? host + cover : '../../../assets/image/no-cover.svg'">
@@ -10,7 +13,10 @@
 
     <div class="bee-card-body2" *ngIf="full">
         <div class="bee-card-content2">
-            <div class="content2" [innerHTML]="title"></div>
+            <div class="content2">
+                <div class="title" [innerHTML]="title"></div>
+                <div [innerHTML]="description"></div>
+            </div>
         </div>
         <div class="bee-card-cover2">
             <img [src]="cover ? host + cover : '../../../assets/image/no-cover.svg'">

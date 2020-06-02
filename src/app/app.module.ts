@@ -14,6 +14,7 @@ import {ComponentModule} from './component/component.module';
 import {ListComponent} from './list/list.component';
 import {HomeComponent} from './home/home.component';
 import {DetailComponent} from './detail/detail.component';
+import { ImageUrlDirective } from './directive/image-url.directive';
 
 registerLocaleData(zh);
 
@@ -22,7 +23,8 @@ registerLocaleData(zh);
         AppComponent,
         ListComponent,
         HomeComponent,
-        DetailComponent
+        DetailComponent,
+        ImageUrlDirective
     ],
     imports: [
         BrowserModule,

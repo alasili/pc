@@ -23,6 +23,7 @@ export class ListComponent implements OnInit {
     parentLoading = false;
 
     type = '';
+    detail = '';
 
     constructor(private router: Router,
                 private http: HttpService,
@@ -31,6 +32,7 @@ export class ListComponent implements OnInit {
             this.condition = res.id;
             this.pid = res.pid;
             this.type = res.type;
+            this.detail = res.detail;
             this.parentLoading = false;
             this.getParent(res.pid);
             this.getData();
@@ -80,7 +82,9 @@ export class ListComponent implements OnInit {
     }
 
     itemClikc(event: any): void {
-        this.router.navigate(['/detail'], {queryParams: {pid: this.pid, id: event.id}});
+        if (this.detail !== 'nodetail') {
+            this.router.navigate(['/detail'], {queryParams: {pid: this.pid, id: event.id}});
+        }
     }
 
 }

@@ -38,6 +38,11 @@
             height: 100%;
             overflow-x: auto;
             overflow-y: hidden;
+
+            .title {
+                font-weight: bold;
+                font-size: 20px;
+            }
         }
     }
 
@@ -100,6 +105,11 @@
             overflow-x: auto;
             overflow-y: hidden;
             color: #fff;
+
+            .title {
+                font-weight: bold;
+                font-size: 20px;
+            }
         }
     }
 

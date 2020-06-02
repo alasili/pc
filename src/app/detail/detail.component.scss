@@ -20,6 +20,7 @@
 
     &-body {
         flex: 1;
+        display: flex;
         width: var(--bee-body-width);
         margin: var(--bee-margin) auto;
         padding: var(--bee-padding);
@@ -27,12 +28,34 @@
         overflow: hidden;
     }
 
+    &-title {
+        display: flex;
+
+        .title {
+            writing-mode: vertical-lr;
+            font-size: 26px;
+            font-weight: bold;
+            font-family: var(--bee-font-family);
+            padding: 0 var(--bee-padding);
+            display: flex;
+            justify-content: center;
+        }
+        .autho {
+            writing-mode: vertical-lr;
+            padding: var(--bee-padding);
+            background-color: rgba(194, 141, 61, 0.3);
+            border-right: 2px solid #C28D3D;
+            font-size: 18px;
+            font-family: var(--bee-font-family);
+        }
+    }
+
     &-content {
-        width: 100%;
+        flex: 1;
         height: 100%;
         writing-mode: vertical-lr;
         font-family: var(--bee-font-family);
-        font-size: 16px;
+        font-size: 20px;
         overflow-x: auto;
         overflow-y: hidden;
     }
