@@ -1,0 +1,36 @@
+<div class="orh-media">
+    <div class="orh-media-content1" *ngIf="!autoplay">
+        <img class="orh-media-cover" [src]="cover">
+    </div>
+    <div class="orh-media-content" *ngIf="autoplay">
+        <vg-player (onPlayerReady)="onPlayerReady($event)">
+            <vg-overlay-play vgFor="my-video"></vg-overlay-play>
+            <vg-buffering></vg-buffering>
+
+            <vg-controls [vgAutohide]="true" [vgAutohideTime]="3" class="orh-media-controls" #controls>
+                <vg-time-display class="orh-media-time" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                <vg-scrub-bar class="orh-media-progress">
+                    <vg-scrub-bar-current-time class="orh-media-current" [vgSlider]="true"></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time class="orh-media-buffering"></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+
+                <div class="orh-media-speed" [ngStyle]="{ bottom: speedBottom }">
+                    <vg-scrub-bar class="orh-media-speed-progress">
+                        <vg-scrub-bar-current-time class="orh-media-speed-current" [vgSlider]="true"></vg-scrub-bar-current-time>
+                        <vg-scrub-bar-buffering-time class="orh-media-speed-buffering"></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                </div>
+
+                <vg-time-display class="orh-media-time" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                <vg-fullscreen class="orh-media-fullscreen" [ngStyle]="{backgroundImage: backgroundImage}"></vg-fullscreen>
+            </vg-controls>
+
+            <video #myMedia [vgMedia]="myMedia"
+                   id="my-video" preload="auto"
+                   [poster]="poster"
+                   playsinline webkit-playsinline [autoplay]="play">
+                <source [src]="url" type="video/mp4">
+            </video>
+        </vg-player>
+    </div>
+</div>

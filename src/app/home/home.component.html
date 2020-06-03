@@ -27,7 +27,7 @@
             </div>
             <div class="news-content" [ngStyle]="{left: newLeft}">
                 <div class="new-item" *ngFor="let item of list; let i = index;" [hidden]="i > 3" (click)="itemClikc(item)">
-                    <div class="title"> {{ item.description }} </div>
+                    <div class="title"> {{ item.title }} </div>
                     <img [src]="host + item.ico">
                 </div>
                 <div class="new-more" (click)="newsClikc()">

@@ -1,0 +1,29 @@
+<bee-nav></bee-nav>
+
+<div class="bee-list">
+
+    <div class="bee-list-logo" *ngIf="parentLoading">
+        <img [src]="host + parentData.pic">
+    </div>
+
+    <div class="bee-list-content">
+
+        <div class="content">
+            <div class="list-item" *ngFor="let item of data;" (click)="itemClikc(item)">
+                <bee-media [autoplay]="playSelect === item.id" [cover]="host + item.ico" [url]="item.enclosure"></bee-media>
+            </div>
+        </div>
+
+        <div class="" *ngIf="loading">
+            <nz-skeleton [nzActive]="true"></nz-skeleton>
+        </div>
+
+
+        <div class="list-page" *ngIf="total !== 0">
+            <nz-pagination [nzPageIndex]="page" [nzTotal]="total" (nzPageIndexChange)="pageChange($event)"
+                           (nzPageSizeChange)="limitChange($event)" nzShowSizeChanger
+                           [nzPageSize]="limit"></nz-pagination>
+        </div>
+    </div>
+</div>
+

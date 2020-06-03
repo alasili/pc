@@ -1,0 +1,7 @@
+<svg id="icon_全屏" data-name="icon/全屏" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="矩形_1520" data-name="矩形 1520" width="24" height="24" fill="#fdb216" opacity="0"/>
+  <g id="组_1274" data-name="组 1274" transform="translate(4.043 4)">
+    <rect id="矩形_1519" data-name="矩形 1519" width="16" height="16" transform="translate(-0.043)" fill="#fdb216" opacity="0"/>
+    <path id="路径_702" data-name="路径 702" d="M936.679,579.558a.6.6,0,1,1,0-1.2h2.8a1.4,1.4,0,0,1,1.4,1.4h0v2.8a.6.6,0,1,1-1.2,0v-2.8a.2.2,0,0,0-.2-.2h-2.8Zm3,9.8a.6.6,0,0,1,1.2,0v2.8a1.4,1.4,0,0,1-1.4,1.4h-2.8a.6.6,0,1,1,0-1.2h2.8a.2.2,0,0,0,.2-.2h0Zm-9.8,3a.6.6,0,0,1,0,1.2h-2.8a1.4,1.4,0,0,1-1.4-1.4h0v-2.8a.6.6,0,0,1,1.2,0v2.8a.2.2,0,0,0,.2.2h2.8Zm-3-9.8a.6.6,0,1,1-1.2,0v-2.8a1.4,1.4,0,0,1,1.4-1.4h2.8a.6.6,0,0,1,0,1.2h-2.8a.2.2,0,0,0-.2.2h0Z" transform="translate(-925.162 -577.958)" fill="#fdb216"/>
+  </g>
+</svg>

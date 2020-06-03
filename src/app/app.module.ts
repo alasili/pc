@@ -15,6 +15,7 @@ import {ListComponent} from './list/list.component';
 import {HomeComponent} from './home/home.component';
 import {DetailComponent} from './detail/detail.component';
 import { ImageUrlDirective } from './directive/image-url.directive';
+import { VideoComponent } from './video/video.component';
 
 registerLocaleData(zh);
 
@@ -24,7 +25,8 @@ registerLocaleData(zh);
         ListComponent,
         HomeComponent,
         DetailComponent,
-        ImageUrlDirective
+        ImageUrlDirective,
+        VideoComponent
     ],
     imports: [
         BrowserModule,

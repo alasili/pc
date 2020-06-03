@@ -40,16 +40,51 @@ export class BeeNavComponent implements OnInit {
     }
 
     navChange(parent: any, event: any): void {
+        console.log(event, 'nav.sss');
+        switch (event.mcode) {
+            case '1':
+                break;
+            case '2':
+                this.handleNav2(parent, event);
+                break;
+            case '3':
+                break;
+            case '4':
+                this.handleNav1(parent, event);
+                break;
+            case '5':
+                break;
+        }
+    }
+
+    handleNav1(parent: any, event: any): void {
+        if (event.outlink) {
+            window.open(event.outlink);
+        } else {
+            this.router.navigate(['/video'], {
+                queryParams: {
+                    pid: parent.scode,
+                    id: event.scode
+                }
+            });
+        }
+    }
+
+    handleNav2(parent: any, event: any): void {
         const bool = event.filename.includes('exhibition');
         const detail = event.filename.includes('nodetail');
-        this.router.navigate(['/list'], {
-            queryParams: {
-                pid: parent.scode,
-                id: event.scode,
-                type: bool ? 'exhibition' : '',
-                detail: detail ? 'nodetail' : ''
-            }
-        });
+        if (event.outlink) {
+            window.open(event.outlink);
+        } else {
+            this.router.navigate(['/list'], {
+                queryParams: {
+                    pid: parent.scode,
+                    id: event.scode,
+                    type: bool ? 'exhibition' : '',
+                    detail: detail ? 'nodetail' : ''
+                }
+            });
+        }
     }
 
     logoClikc(): void {
