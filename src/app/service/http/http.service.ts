@@ -10,6 +10,7 @@ import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
 import {UtilsService} from '../utils/utils.service';
 import Config from '../../config';
+import {Unicode2M, M2Unicode} from 'orhon-mongol-lib';
 
 interface Params {
     url: string;
@@ -108,7 +109,7 @@ export class HttpService {
      * @param res 结果
      */
     private handleResult(res, utils?: any): any {
-        const body = res;
+        const body = JSON.parse(M2Unicode(JSON.stringify(res)));
         return body || {};
     }
 

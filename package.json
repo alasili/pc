@@ -21,6 +21,7 @@
         "@angular/router": "~8.2.0",
         "jquery": "^3.5.1",
         "ng-zorro-antd": "^8.5.2",
+        "orhon-mongol-lib": "^1.0.4",
         "rxjs": "~6.4.0",
         "tslib": "^1.10.0",
         "videogular2": "^7.0.2",

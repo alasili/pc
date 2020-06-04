@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../service/http/http.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Unicode2M, M2Unicode} from 'orhon-mongol-lib';
 
 @Component({
     selector: 'bee-nav',
@@ -40,7 +41,6 @@ export class BeeNavComponent implements OnInit {
     }
 
     navChange(parent: any, event: any): void {
-        console.log(event, 'nav.sss');
         switch (event.mcode) {
             case '1':
                 break;
@@ -85,6 +85,10 @@ export class BeeNavComponent implements OnInit {
                 }
             });
         }
+    }
+
+    handleLabel(str: string): string {
+        return M2Unicode(str);
     }
 
     logoClikc(): void {
