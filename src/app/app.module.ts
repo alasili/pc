@@ -16,6 +16,7 @@ import {HomeComponent} from './home/home.component';
 import {DetailComponent} from './detail/detail.component';
 import { ImageUrlDirective } from './directive/image-url.directive';
 import { VideoComponent } from './video/video.component';
+import { VrComponent } from './vr/vr.component';
 
 registerLocaleData(zh);
 
@@ -26,7 +27,8 @@ registerLocaleData(zh);
         HomeComponent,
         DetailComponent,
         ImageUrlDirective,
-        VideoComponent
+        VideoComponent,
+        VrComponent
     ],
     imports: [
         BrowserModule,

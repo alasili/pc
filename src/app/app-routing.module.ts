@@ -4,6 +4,7 @@ import {ListComponent} from './list/list.component';
 import {HomeComponent} from './home/home.component';
 import {DetailComponent} from './detail/detail.component';
 import {VideoComponent} from './video/video.component';
+import {VrComponent} from './vr/vr.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'detail',
         component: DetailComponent
+    },
+    {
+        path: 'vr',
+        component: VrComponent
     },
     {
         path: '',

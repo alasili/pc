@@ -74,7 +74,12 @@ export class BeeNavComponent implements OnInit {
         const bool = event.filename.includes('exhibition');
         const detail = event.filename.includes('nodetail');
         if (event.outlink) {
-            window.open(event.outlink);
+            // window.open(event.outlink);
+            this.router.navigate(['/vr'], {
+                queryParams: {
+                    url: event.outlink,
+                }
+            });
         } else {
             this.router.navigate(['/list'], {
                 queryParams: {
